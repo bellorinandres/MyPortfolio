@@ -1,0 +1,111 @@
+{
+  "basics": {
+    "name": "Andres David Bellorin Marin",
+    "label": "Líder de Sector en Atacadão",
+    "image": "/me.webp",
+    "email": "andresbellorin.br@gmail.com",
+    "url": "https://andresbellorin.dev",
+    "summary": "Líder de sector con experiencia en supermercado y un fuerte interés en el desarrollo web y la tecnología. Motivado por el aprendizaje constante, actualmente estoy desarrollando proyectos propios mientras trabajo a tiempo completo.",
+    "location": {
+      "city": "Curitiba",
+      "region": "Paraná",
+      "postalCode": "82015010",
+      "country": "Brasil"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "andresbellorin",
+        "url": "https://www.linkedin.com/in/andresbellorin"
+      },
+      {
+        "network": "GitHub",
+        "username": "andresbellorin",
+        "url": "https://github.com/bellorinandres"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Atacadão (Grupo Carrefour)",
+      "position": "Líder de Sector",
+      "location": "Curitiba, Brasil",
+      "startDate": "2024-11",
+      "summary": "Supervisión y organización del sector de reposición de mercancía. Coordinación de tareas, liderazgo de equipo y control de inventario.",
+      "highlights": [
+        "Promovido desde Repositor de Mercadería a Líder de Sector",
+        "Experiencia en liderazgo, atención al cliente y control operativo"
+      ]
+    },
+    {
+      "name": "Atacadão (Grupo Carrefour)",
+      "position": "Repositor de Mercadería",
+      "location": "Curitiba, Brasil",
+      "startDate": "2024-1",
+      "endDate": "2024-11",
+      "summary": "Reposición de productos, organización de góndolas y soporte a clientes.",
+      "highlights": [
+        "Desempeño destacado que permitió promoción interna",
+        "Conocimiento en gestión de stock y trabajo en equipo"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Gran Mariscal de Ayacucho",
+      "area": "Ingeniería (no finalizado)",
+      "studyType": "Pregrado",
+      "location": "Venezuela",
+      "startDate": "2012",
+      "endDate": " ",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "MySQL",
+      "level": "Intermedio",
+      "keywords": ["Bases de datos", "SQL", "Backend"]
+    },
+    {
+      "name": "Node.js",
+      "level": "Intermedio",
+      "keywords": ["Backend", "JavaScript", "APIs"]
+    },
+    {
+      "name": "React",
+      "level": "Intermedio",
+      "keywords": ["Frontend", "JavaScript", "UI"]
+    },
+    {
+      "name": "Python",
+      "level": "Básico",
+      "keywords": ["Programación", "Automatización", "Backend"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "Portugués",
+      "fluency": "Intermedio"
+    }
+  ],
+  "projects": [
+    {
+      "name": "MeuMercado",
+      "isActive": true,
+      "description": "Aplicación para crear y organizar listas de compras de forma fácil e inteligente.",
+      "highlights": [
+        "Backend en Node.js",
+        "Frontend en React",
+        "Base de datos MySQL",
+        "Proyecto en desarrollo"
+      ],
+      "url": "https://github.com/andresbellorin/meumercado"
+    }
+  ]
+}
