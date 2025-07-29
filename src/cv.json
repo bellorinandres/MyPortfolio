@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Andres David Bellorin Marin",
-    "label": "Líder de Sector en Atacadão",
+    "label": "Líder de Setor no Atacadão",
     "image": "/me.webp",
     "email": "andresbellorin.br@gmail.com",
     "url": "https://andresbellorin.dev",
-    "summary": "Líder de sector con experiencia en supermercado y un fuerte interés en el desarrollo web y la tecnología. Motivado por el aprendizaje constante, actualmente estoy desarrollando proyectos propios mientras trabajo a tiempo completo.",
+    "summary": "Líder de setor com experiência em supermercado e forte interesse em desenvolvimento web e tecnologia. Motivado pelo aprendizado constante, atualmente estou desenvolvendo projetos próprios enquanto trabalho em tempo integral.",
     "location": {
       "city": "Curitiba",
       "region": "Paraná",
@@ -28,33 +28,33 @@
   "work": [
     {
       "name": "Atacadão (Grupo Carrefour)",
-      "position": "Líder de Sector",
+      "position": "Líder de Setor",
       "location": "Curitiba, Brasil",
       "startDate": "2024-11",
-      "summary": "Supervisión y organización del sector de reposición de mercancía. Coordinación de tareas, liderazgo de equipo y control de inventario.",
+      "summary": "Supervisão e organização do setor de reposição de mercadorias. Coordenação de tarefas, liderança de equipe e controle de estoque.",
       "highlights": [
-        "Promovido desde Repositor de Mercadería a Líder de Sector",
-        "Experiencia en liderazgo, atención al cliente y control operativo"
+        "Promovido de Repositor de Mercadoria para Líder de Setor",
+        "Experiência em liderança, atendimento ao cliente e controle operacional"
       ]
     },
     {
       "name": "Atacadão (Grupo Carrefour)",
-      "position": "Repositor de Mercadería",
+      "position": "Repositor de Mercadoria",
       "location": "Curitiba, Brasil",
       "startDate": "2024-1",
       "endDate": "2024-11",
-      "summary": "Reposición de productos, organización de góndolas y soporte a clientes.",
+      "summary": "Reposição de produtos, organização de gôndolas e suporte a clientes.",
       "highlights": [
-        "Desempeño destacado que permitió promoción interna",
-        "Conocimiento en gestión de stock y trabajo en equipo"
+        "Desempenho de destaque que permitiu promoção interna",
+        "Conhecimento em gestão de estoque e trabalho em equipe"
       ]
     }
   ],
   "education": [
     {
       "institution": "Universidad Gran Mariscal de Ayacucho",
-      "area": "Ingeniería (no finalizado)",
-      "studyType": "Pregrado",
+      "area": "Engenharia (não finalizado)",
+      "studyType": "Graduação",
       "location": "Venezuela",
       "startDate": "2012",
       "endDate": " ",
@@ -65,47 +65,47 @@
   "skills": [
     {
       "name": "MySQL",
-      "level": "Intermedio",
-      "keywords": ["Bases de datos", "SQL", "Backend"]
+      "level": "Intermediário",
+      "keywords": ["Bancos de dados", "SQL", "Backend"]
     },
     {
       "name": "Node.js",
-      "level": "Intermedio",
+      "level": "Intermediário",
       "keywords": ["Backend", "JavaScript", "APIs"]
     },
     {
       "name": "React",
-      "level": "Intermedio",
+      "level": "Intermediário",
       "keywords": ["Frontend", "JavaScript", "UI"]
     },
     {
       "name": "Python",
       "level": "Básico",
-      "keywords": ["Programación", "Automatización", "Backend"]
+      "keywords": ["Programação", "Automação", "Backend"]
     }
   ],
   "languages": [
     {
-      "language": "Español",
+      "language": "Espanhol",
       "fluency": "Nativo"
     },
     {
-      "language": "Portugués",
-      "fluency": "Intermedio"
+      "language": "Português",
+      "fluency": "Intermediário"
     }
   ],
   "projects": [
     {
       "name": "MeuMercado",
       "isActive": true,
-      "description": "Aplicación para crear y organizar listas de compras de forma fácil e inteligente.",
+      "description": "Aplicativo para criar e organizar listas de compras de forma fácil e inteligente.",
       "highlights": [
-        "Backend en Node.js",
-        "Frontend en React",
-        "Base de datos MySQL",
-        "Proyecto en desarrollo"
+        "Backend em Node.js",
+        "Frontend em React",
+        "Banco de dados MySQL",
+        "Projeto em desenvolvimento"
       ],
-      "url": "https://github.com/andresbellorin/meumercado"
+      "url": "https://meu-mercado-rho.vercel.app/"
     }
   ]
 }
