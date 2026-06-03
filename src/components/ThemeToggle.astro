@@ -48,21 +48,24 @@
 <style>
   .theme-toggle {
     align-items: center;
+    appearance: none;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 6px;
+    box-sizing: border-box;
     color: var(--text-muted);
     cursor: pointer;
     display: inline-flex;
     font: inherit;
-    height: 32px;
+    height: 36px;
     justify-content: center;
+    line-height: 0;
     padding: 4px;
     transition:
       background-color 0.2s ease,
       border-color 0.2s ease,
       color 0.2s ease;
-    width: 32px;
+    width: 36px;
   }
 
   .theme-toggle:hover {
@@ -73,7 +76,7 @@
 
   .theme-toggle span {
     color: currentColor;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1;
   }
 

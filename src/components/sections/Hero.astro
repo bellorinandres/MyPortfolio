@@ -25,7 +25,9 @@ const SOCIAL_ICONS = {
       <span>
         {location.city}, {location.postalCode} - {location.region}
       </span>
-      <footer>
+      {email && <p class="print-email print">E-mail: {email}</p>}
+
+      <footer class="no-print">
         {
           email && (
             <a
@@ -111,10 +113,11 @@ const SOCIAL_ICONS = {
   }
 
   footer {
+    align-items: center;
     color: var(--text-subtle);
     font-size: 0.65rem;
     display: flex;
-    gap: 4px;
+    gap: 6px;
     margin-top: 8px;
   }
 
@@ -125,9 +128,10 @@ const SOCIAL_ICONS = {
     justify-content: center;
     background: var(--surface);
     border: 1px solid var(--border);
+    line-height: 0;
     padding: 4px;
-    height: 32px;
-    width: 32px;
+    height: 36px;
+    width: 36px;
     border-radius: 6px;
     transition:
       background-color 0.2s ease,
@@ -139,6 +143,18 @@ const SOCIAL_ICONS = {
     background: var(--surface-hover);
     border: 1px solid var(--border-strong);
     color: var(--text);
+  }
+
+  footer a :global(svg) {
+    display: block;
+    height: 18px;
+    width: 18px;
+  }
+
+  .print-email {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.35rem;
   }
 
   @media (width <= 700px) {
