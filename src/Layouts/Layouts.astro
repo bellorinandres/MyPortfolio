@@ -7,10 +7,52 @@ interface Props {
 
 const { title } = Astro.props;
 
-const { image, summary, url } = basics;
+const { email, image, label, location, name, profiles, summary, url } = basics;
 const siteUrl = url.endsWith("/") ? url : `${url}/`;
 const imageUrl = new URL(image, siteUrl).toString();
 const domain = new URL(siteUrl).hostname;
+const profileUrls = profiles.map(({ url }) => url);
+const keywords = [
+  name,
+  label,
+  "portfolio",
+  "currículo",
+  "desenvolvimento web",
+  "software developer",
+  location.city,
+  location.country,
+];
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name,
+    jobTitle: label,
+    description: summary,
+    email: `mailto:${email}`,
+    image: imageUrl,
+    url: siteUrl,
+    sameAs: profileUrls,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: location.city,
+      addressRegion: location.region,
+      addressCountry: location.country,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: `${name} Portfolio`,
+    description: summary,
+    url: siteUrl,
+    inLanguage: "pt-BR",
+    author: {
+      "@type": "Person",
+      name,
+    },
+  },
+];
 ---
 
 <!doctype html>
@@ -20,21 +62,31 @@ const domain = new URL(siteUrl).hostname;
     <title>{title}</title>
     <meta name="description" content={summary} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content={name} />
+    <meta name="keywords" content={keywords.join(", ")} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0b0f14" />
+    <link rel="canonical" href={siteUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="image" href={image} />
 
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={siteUrl} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content={`${name} Portfolio`} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={summary} />
     <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content={`${name} - ${label}`} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content={domain} />
-    <meta property="twitter:url" content={url} />
+    <meta property="twitter:url" content={siteUrl} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={summary} />
     <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:image:alt" content={`${name} - ${label}`} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <script is:inline>
       (() => {
         const storageKey = "theme";
