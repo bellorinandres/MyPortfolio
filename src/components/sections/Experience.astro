@@ -130,7 +130,9 @@ const getYear = (date?: string | null) => {
 
   [data-title]:hover:after {
     opacity: 1;
-    transition: all 0.1s ease-in-out 0.5s;
+    transition:
+      opacity 0.1s ease-in-out 0.5s,
+      visibility 0.1s ease-in-out 0.5s;
     visibility: visible;
   }
 
