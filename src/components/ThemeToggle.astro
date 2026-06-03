@@ -1,0 +1,81 @@
+<button class="theme-toggle no-print" type="button" aria-label="Alternar tema" title="Alternar tema" data-theme-toggle>
+  <span class="sun" aria-hidden="true">☀</span>
+  <span class="moon" aria-hidden="true">☾</span>
+</button>
+
+<script>
+  const toggleTheme = () => {
+    const themeApi = window as typeof window & {
+      toggleTheme?: () => void;
+      setTheme?: (theme: "dark" | "light") => void;
+    };
+
+    if (typeof themeApi.toggleTheme === "function") {
+      themeApi.toggleTheme();
+      return;
+    }
+
+    const root = document.documentElement;
+    const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+    root.dataset.theme = nextTheme;
+    root.style.colorScheme = nextTheme;
+    localStorage.setItem("theme", nextTheme);
+    updateThemeToggleLabels(nextTheme);
+  };
+
+  const updateThemeToggleLabels = (theme: string) => {
+    const label = theme === "light" ? "Ativar tema escuro" : "Ativar tema claro";
+
+    document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]").forEach((button) => {
+      button.setAttribute("aria-label", label);
+      button.setAttribute("title", label);
+    });
+  };
+
+  document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      toggleTheme();
+    });
+  });
+
+  window.addEventListener("themechange", (event) => {
+    updateThemeToggleLabels((event as CustomEvent<{ theme: string }>).detail.theme);
+  });
+
+  updateThemeToggleLabels(document.documentElement.dataset.theme ?? "dark");
+</script>
+
+<style>
+  .theme-toggle {
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    height: 32px;
+    justify-content: center;
+    padding: 4px;
+    transition: all 0.3s ease;
+    width: 32px;
+  }
+
+  .theme-toggle:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+
+  .theme-toggle span {
+    color: currentColor;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  :global(html[data-theme="dark"]) .theme-toggle .sun,
+  :global(html[data-theme="light"]) .theme-toggle .moon {
+    display: none;
+  }
+</style>

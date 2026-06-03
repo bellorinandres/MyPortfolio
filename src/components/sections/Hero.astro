@@ -1,6 +1,7 @@
 ---
 import { basics } from "@cv";
 import Area from "@/components/Area.astro";
+import ThemeToggle from "@/components/ThemeToggle.astro";
 const { name, label, location, email, image, profiles } = basics;
 
 import Mail from "@/icons/Mail.astro";
@@ -56,6 +57,7 @@ const SOCIAL_ICONS = {
             );
           })
         }
+        <ThemeToggle />
       </footer>
     </div>
     <figure>
@@ -85,7 +87,7 @@ const SOCIAL_ICONS = {
   }
 
   h2 {
-    color: #444;
+    color: var(--text-muted);
     font-weight: 500;
     font-size: 1.1rem;
     text-wrap: balance;
@@ -93,13 +95,14 @@ const SOCIAL_ICONS = {
 
   img {
     aspect-ratio: 1 / 1;
+    border: 1px solid var(--border-strong);
     object-fit: cover;
     width: 128px;
     border-radius: 16px;
   }
 
   span {
-    color: #666;
+    color: var(--text-muted);
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -108,7 +111,7 @@ const SOCIAL_ICONS = {
   }
 
   footer {
-    color: #555;
+    color: var(--text-subtle);
     font-size: 0.65rem;
     display: flex;
     gap: 4px;
@@ -116,11 +119,12 @@ const SOCIAL_ICONS = {
   }
 
   footer a {
-    color: #777;
+    color: var(--text-muted);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #eee;
+    background: var(--surface);
+    border: 1px solid var(--border);
     padding: 4px;
     height: 32px;
     width: 32px;
@@ -129,8 +133,9 @@ const SOCIAL_ICONS = {
   }
 
   footer a:hover {
-    background: #eee;
-    border: 1px solid #ddd;
+    background: var(--surface-hover);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
   }
 
   @media (width <= 700px) {
