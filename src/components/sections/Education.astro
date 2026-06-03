@@ -1,16 +1,25 @@
 ---
 import Area from "@/components/Area.astro";
 import { education } from "@cv";
+
+const getYear = (date?: string | null) => {
+  if (!date?.trim()) return null;
+
+  const parsedDate = new Date(date);
+
+  if (Number.isNaN(parsedDate.getTime())) return null;
+
+  return parsedDate.getFullYear();
+};
 ---
 
-<Area title="Educación">
+<Area title="Educação">
   <ul>
     {
       education.map(({ institution, startDate, endDate, area }) => {
-        const startYear = new Date(startDate).getFullYear();
-        const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : "Actual";
-        const years = `${startYear} - ${endYear}`;
+        const startYear = getYear(startDate);
+        const endYear = getYear(endDate);
+        const years = [startYear, endYear].filter(Boolean).join(" - ");
 
         return (
           <li>
@@ -20,7 +29,7 @@ import { education } from "@cv";
                   <h3>{institution}</h3>
                 </div>
 
-                <time>{years}</time>
+                {years && <time>{years}</time>}
               </header>
 
               <footer>

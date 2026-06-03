@@ -1,16 +1,25 @@
 ---
 import Area from "@/components/Area.astro";
 import { work } from "@cv";
+
+const getYear = (date?: string | null) => {
+  if (!date?.trim()) return null;
+
+  const parsedDate = new Date(date);
+
+  if (Number.isNaN(parsedDate.getTime())) return null;
+
+  return parsedDate.getFullYear();
+};
 ---
 
-<Area title="Experiencia laboral">
+<Area title="Experiência profissional">
   <ul>
     {
       work.map(
         ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear();
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual";
+          const startYear = getYear(startDate);
+          const endYear = getYear(endDate) ?? "Atual";
 
           return (
             <li>
@@ -18,9 +27,18 @@ import { work } from "@cv";
                 <header>
                   <div>
                     <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
-                        {name}
-                      </a>
+                      {url ? (
+                        <a
+                          href={url}
+                          title={`Ver ${name}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {name}
+                        </a>
+                      ) : (
+                        name
+                      )}
                     </h3>
                     <h4>{position}</h4>
                   </div>
@@ -30,7 +48,7 @@ import { work } from "@cv";
                       {startYear}
                     </time>
                     {" - "}
-                    <time datetime={endDate} data-title={endDate}>
+                    <time datetime={endDate ?? undefined} data-title={endDate ?? "Atual"}>
                       {endYear}
                     </time>
                   </div>
@@ -38,6 +56,13 @@ import { work } from "@cv";
 
                 <footer>
                   <p>{summary}</p>
+                  {highlights.length > 0 && (
+                    <ul class="highlights">
+                      {highlights.map((highlight) => (
+                        <li>{highlight}</li>
+                      ))}
+                    </ul>
+                  )}
                 </footer>
               </article>
             </li>
@@ -71,6 +96,22 @@ import { work } from "@cv";
   article h4 {
     color: #222;
     font-weight: 400;
+  }
+
+  article footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .highlights {
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    gap: 4px;
+    list-style: disc;
+    padding-left: 1rem;
   }
 
   header {

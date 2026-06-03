@@ -6,6 +6,7 @@ import JavaScript from "@/icons/javascript.astro";
 import TypeScript from "@/icons/type.astro";
 import React from "@/icons/react.astro";
 import Node from "@/icons/node.astro";
+import Python from "@/icons/python.astro";
 import MySQL from "@/icons/sql.astro";
 import Git from "@/icons/git.astro";
 import GitHub from "@/icons/GitHub.astro";
@@ -17,13 +18,14 @@ import SwiftUI from "@/icons/swiftui.astro";
 import Kotlin from "@/icons/kotlin.astro";
 import Flutter from "@/icons/flutter.astro";
 
-const SKILLS_ICONS: Record<string, any> = {
+const SKILLS_ICONS = {
   HTML,
   CSS,
   JavaScript,
   TypeScript,
   React,
   Node,
+  Python,
   MySQL,
   Git,
   GitHub,
@@ -39,13 +41,22 @@ const SKILLS_ICONS: Record<string, any> = {
 <Area title="Habilidades">
   <ul>
     {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name;
-        const Icon = SKILLS_ICONS[iconName];
+      skills.map(({ name, level, keywords }) => {
+        const iconName =
+          {
+            "Next.js": "Next",
+            "Node.js": "Node",
+          }[name] ?? name;
+        const Icon = SKILLS_ICONS[iconName as keyof typeof SKILLS_ICONS];
 
         return (
           <li>
-            {Icon && <Icon />} <span>{name}</span>
+            <div class="skill-title">
+              {Icon && <Icon />}
+              <strong>{name}</strong>
+              <span>{level}</span>
+            </div>
+            {keywords.length > 0 && <small>{keywords.join(" • ")}</small>}
           </li>
         );
       })
@@ -55,20 +66,35 @@ const SKILLS_ICONS: Record<string, any> = {
 
 <style>
   ul {
-    display: inline-flex;
+    display: grid;
     gap: 8px;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 
   li {
-    align-items: center;
     background: #eee;
     border-radius: 6px;
     color: black;
-    display: flex;
+    display: grid;
     font-size: 0.8rem;
     font-weight: 500;
     gap: 4px;
     padding: 0.2rem 0.6rem;
+  }
+
+  .skill-title {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+  }
+
+  .skill-title span,
+  small {
+    color: #555;
+    font-weight: 400;
+  }
+
+  small {
+    font-size: 0.68rem;
   }
 </style>

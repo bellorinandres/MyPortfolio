@@ -3,6 +3,7 @@ import About from "@/components/sections/About.astro";
 import Education from "@/components/sections/Education.astro";
 import Experience from "@/components/sections/Experience.astro";
 import Hero from "@/components/sections/Hero.astro";
+import Languages from "@/components/sections/Languages.astro";
 import Layouts from "../Layouts/Layouts.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Skills from "@/components/sections/Skills.astro";
@@ -12,7 +13,7 @@ import { basics } from "@cv";
 const { name, label } = basics;
 ---
 
-<Layouts title={`Portafolio de ${name} - ${label}`}>
+<Layouts title={`Portfolio de ${name} - ${label}`}>
   <main>
     <Hero />
     <About />
@@ -20,6 +21,7 @@ const { name, label } = basics;
     <Education />
     <Projects />
     <Skills />
+    <Languages />
   </main>
   <KeyBoardManager />
 </Layouts>

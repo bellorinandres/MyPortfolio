@@ -8,18 +8,12 @@ import Mail from "@/icons/Mail.astro";
 import GitHub from "@/icons/GitHub.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import X from "@/icons/X.astro";
-import type { SocialIcon } from "@/types";
 
-const SOCIAL_ICONS: SocialIcon = {
+const SOCIAL_ICONS = {
   GitHub,
   LinkedIn,
   X,
 };
-
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
-const linkedUrl = linkedInfo?.url;
-
-const printInfo = [email, linkedUrl].filter(Boolean).join(" • ");
 ---
 
 <Area>
@@ -35,9 +29,8 @@ const printInfo = [email, linkedUrl].filter(Boolean).join(" • ");
           email && (
             <a
               href={`mailto:${email}`}
-              title={`Enviar un mensaje a ${name} al correo electronico ${email}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              aria-label={`Enviar e-mail para ${name}`}
+              title={`Enviar e-mail para ${name}: ${email}`}
             >
               <Mail />
             </a>
@@ -46,12 +39,15 @@ const printInfo = [email, linkedUrl].filter(Boolean).join(" • ");
 
         {
           profiles.map(({ network, url }) => {
-            const Icon = SOCIAL_ICONS[network];
+            const Icon = SOCIAL_ICONS[network as keyof typeof SOCIAL_ICONS];
+
+            if (!Icon) return null;
 
             return (
               <a
                 href={url}
-                title={`Visitar el perfil de ${name} en ${network}`}
+                aria-label={`Visitar perfil de ${name} en ${network}`}
+                title={`Visitar perfil de ${name} em ${network}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -63,7 +59,7 @@ const printInfo = [email, linkedUrl].filter(Boolean).join(" • ");
       </footer>
     </div>
     <figure>
-      <img src={image} alt={name} />
+      <img src={image} alt={name} width="128" height="128" decoding="async" fetchpriority="high" />
     </figure>
   </div>
 </Area>

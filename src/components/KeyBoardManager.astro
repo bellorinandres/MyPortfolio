@@ -1,12 +1,12 @@
 ---
 import "hotkeypad/reset.css";
 import "hotkeypad/index.css";
-import { type SocialIcon } from "@/types";
+import { type SocialIconMap } from "@/types";
 import { basics } from "@cv";
 
 const { profiles } = basics;
 
-const SOCIAL_ICONS: SocialIcon = {
+const SOCIAL_ICONS: SocialIconMap<string> = {
   GitHub: `<svg
   width="16"
   height="16"
@@ -59,7 +59,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
 ---
 
 <footer id="normal-footer" class="no-print">
-  Pulsa <kbd>Ctrl</kbd> + <kbd>K</kbd> para abrir la paleta de comandos.
+  Pressione <kbd>Ctrl</kbd> + <kbd>K</kbd> para abrir a paleta de comandos.
 </footer>
 
 <div id="footer-button" class="no-print">

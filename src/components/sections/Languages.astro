@@ -1,0 +1,44 @@
+---
+import Area from "@/components/Area.astro";
+import { languages } from "@cv";
+---
+
+<Area title="Idiomas">
+  <ul>
+    {
+      languages.map(({ language, fluency }) => (
+        <li>
+          <strong>{language}</strong>
+          <span>{fluency}</span>
+        </li>
+      ))
+    }
+  </ul>
+</Area>
+
+<style>
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  li {
+    align-items: center;
+    background: #eee;
+    border-radius: 6px;
+    color: #111;
+    display: flex;
+    font-size: 0.8rem;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  span {
+    color: #555;
+  }
+</style>
