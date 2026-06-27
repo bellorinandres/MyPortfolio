@@ -94,7 +94,9 @@ const structuredData = [
 
         const getSavedTheme = () => {
           try {
-            return localStorage.getItem(storageKey) === "light" ? "light" : "dark";
+            const saved = localStorage.getItem(storageKey);
+            if (saved === "light" || saved === "dark") return saved;
+            return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
           } catch {
             return "dark";
           }
