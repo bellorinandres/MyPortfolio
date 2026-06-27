@@ -1,5 +1,6 @@
 ---
-import { basics } from "@cv";
+import Analytics from "@vercel/analytics/astro";
+import { basics, projects } from "@cv";
 
 interface Props {
   title: string;
@@ -52,6 +53,22 @@ const structuredData = [
       name,
     },
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Projetos",
+    itemListElement: projects.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "SoftwareSourceCode",
+        name: project.name,
+        description: project.description,
+        url: project.url,
+        ...(project.github ? { codeRepository: project.github } : {}),
+      },
+    })),
+  },
 ];
 ---
 
@@ -69,6 +86,7 @@ const structuredData = [
     <link rel="canonical" href={siteUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="preload" as="image" href={image} />
 
     <meta property="og:url" content={siteUrl} />
@@ -126,6 +144,7 @@ const structuredData = [
   </head>
   <body>
     <slot />
+    <Analytics />
   </body>
 </html>
 
