@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import meImage from "../../assets/me.webp";
 import { basics } from "@cv";
 import Area from "@/components/Area.astro";
 import ThemeToggle from "@/components/ThemeToggle.astro";
@@ -63,7 +65,7 @@ const SOCIAL_ICONS = {
       </footer>
     </div>
     <figure>
-      <img src={image} alt={name} width="128" height="128" decoding="async" fetchpriority="high" />
+      <Image src={meImage} alt={name} width={128} height={128} densities={[1, 2]} fetchpriority="high" />
     </figure>
   </div>
 </Area>

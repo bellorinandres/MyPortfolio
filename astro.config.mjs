@@ -6,5 +6,6 @@ import cv from './src/cv.json' with { type: 'json' };
 // https://astro.build/config
 export default defineConfig({
   site: cv.basics.url,
+  compressHTML: true,
   integrations: [sitemap()],
 });
