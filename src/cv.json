@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Andres David Bellorin Marin",
-    "label": "Líder de Setor no Atacadão",
+    "label": "Desenvolvedor Web Full Stack Jr | Node.js · React · MySQL",
     "image": "/me.webp",
     "email": "andresbellorin.br@gmail.com",
     "url": "https://andresbellorin.dev",
-    "summary": "Líder de setor com experiência em supermercado e forte interesse em desenvolvimento web e tecnologia. Motivado pelo aprendizado constante, atualmente estou desenvolvendo projetos próprios enquanto trabalho em tempo integral.",
+    "summary": "Desenvolvedor web autodidata com stack Full Stack (Node.js, React, MySQL) e projetos próprios em produção. Experiência em liderança de equipe no varejo, com foco em gestão de processos e trabalho sob pressão. Documentado regularmente no Brasil; disponível para trabalho presencial em Curitiba ou remoto.",
     "location": {
       "city": "Curitiba",
       "region": "Paraná",
@@ -64,9 +64,29 @@
   ],
   "skills": [
     {
-      "name": "MySQL",
+      "name": "HTML",
       "level": "Intermediário",
-      "keywords": ["Bancos de dados", "SQL", "Backend"]
+      "keywords": ["Frontend", "Web", "Semântica"]
+    },
+    {
+      "name": "CSS",
+      "level": "Intermediário",
+      "keywords": ["Frontend", "Web", "Responsivo"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Intermediário",
+      "keywords": ["Frontend", "Backend", "Web"]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Básico",
+      "keywords": ["Frontend", "Backend", "Tipagem"]
+    },
+    {
+      "name": "React",
+      "level": "Intermediário",
+      "keywords": ["Frontend", "JavaScript", "UI"]
     },
     {
       "name": "Node.js",
@@ -74,9 +94,19 @@
       "keywords": ["Backend", "JavaScript", "APIs"]
     },
     {
-      "name": "React",
+      "name": "MySQL",
       "level": "Intermediário",
-      "keywords": ["Frontend", "JavaScript", "UI"]
+      "keywords": ["Bancos de dados", "SQL", "Backend"]
+    },
+    {
+      "name": "Astro",
+      "level": "Intermediário",
+      "keywords": ["Frontend", "SSG", "Web"]
+    },
+    {
+      "name": "Git",
+      "level": "Intermediário",
+      "keywords": ["Controle de versão", "Colaboração", "DevOps"]
     },
     {
       "name": "Python",
@@ -92,6 +122,10 @@
     {
       "language": "Português",
       "fluency": "Intermediário"
+    },
+    {
+      "language": "Inglês",
+      "fluency": "Básico (leitura de documentação)"
     }
   ],
   "projects": [
@@ -107,6 +141,19 @@
       ],
       "url": "https://meu-mercado-rho.vercel.app/",
       "github": "https://github.com/bellorinandres/meuCompra"
+    },
+    {
+      "name": "Portfólio Pessoal",
+      "isActive": true,
+      "description": "Site de portfólio e currículo desenvolvido com Astro, com suporte a tema escuro/claro, SEO completo, PWA e métricas de visitas.",
+      "highlights": [
+        "Astro 6 + TypeScript",
+        "CSS puro sem frameworks",
+        "SEO com JSON-LD e Open Graph",
+        "PWA e Vercel Analytics"
+      ],
+      "url": "https://andresbellorin.dev",
+      "github": "https://github.com/bellorinandres/MyPortfolio"
     }
   ]
 }
