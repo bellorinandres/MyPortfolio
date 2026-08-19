@@ -130,16 +130,16 @@
   ],
   "projects": [
     {
-      "name": "MeuMercado",
+      "name": "CompraJá",
       "isActive": true,
-      "description": "Aplicativo para criar e organizar listas de compras de forma fácil e inteligente.",
+      "description": "Aplicativo web para criar e organizar listas de compras de forma rápida e inteligente, com controle de gastos em tempo real.",
       "highlights": [
         "Backend em Node.js",
         "Frontend em React",
         "Banco de dados MySQL",
         "Projeto em desenvolvimento"
       ],
-      "url": "https://meu-mercado-rho.vercel.app/",
+      "url": "https://compraja.app.br",
       "github": "https://github.com/bellorinandres/meuCompra"
     },
     {
