@@ -4,7 +4,7 @@
     "label": "Desenvolvedor Web Full Stack Jr | Node.js · React · MySQL",
     "image": "/me.webp",
     "email": "andresbellorin.br@gmail.com",
-    "url": "https://andresbellorin.dev",
+    "url": "https://my-portfolio-opal-kappa-70.vercel.app",
     "summary": "Desenvolvedor web autodidata com stack Full Stack (Node.js, React, MySQL) e projetos próprios em produção. Experiência em liderança de equipe no varejo, com foco em gestão de processos e trabalho sob pressão. Documentado regularmente no Brasil; disponível para trabalho presencial em Curitiba ou remoto.",
     "location": {
       "city": "Curitiba",
@@ -165,7 +165,7 @@
         "SEO com JSON-LD e Open Graph",
         "PWA e Vercel Analytics"
       ],
-      "url": "https://andresbellorin.dev",
+      "url": "https://my-portfolio-opal-kappa-70.vercel.app",
       "github": "https://github.com/bellorinandres/MyPortfolio"
     }
   ]
