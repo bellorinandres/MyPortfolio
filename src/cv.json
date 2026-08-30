@@ -139,8 +139,21 @@
         "Banco de dados MySQL",
         "Projeto em desenvolvimento"
       ],
-      "url": "https://compraja.app.br",
-      "github": "https://github.com/bellorinandres/meuCompra"
+      "url": "https://compraja.app.br"
+    },
+    {
+      "name": "Francis Tattoo",
+      "isActive": true,
+      "description": "Site de portfólio e agendamento para tatuadora autônoma em Curitiba, com galeria de trabalhos, estilos, cuidados pós-tatuagem e formulário que gera mensagem automática no WhatsApp.",
+      "highlights": [
+        "Site estático e responsivo",
+        "HTML semântico e CSS puro",
+        "Imagens otimizadas em WebP",
+        "Agendamento via WhatsApp API",
+        "Deploy na Vercel"
+      ],
+      "url": "https://francis-tatto.vercel.app",
+      "github": "https://github.com/bellorinandres/francis-tatto-studio"
     },
     {
       "name": "Portfólio Pessoal",
