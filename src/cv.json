@@ -81,7 +81,7 @@
     },
     {
       "name": "Backend",
-      "keywords": ["Node.js", "MySQL", "Python"]
+      "keywords": ["Node.js", "MySQL", "PostgreSQL", "Python"]
     },
     {
       "name": "Ferramentas",
