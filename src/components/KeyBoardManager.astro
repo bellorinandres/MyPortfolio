@@ -43,9 +43,12 @@ const SOCIAL_ICONS: SocialIconMap<string> = {
 `,
 };
 
+// Ctrl+L é a barra de endereço do navegador; as demais redes usam a inicial.
+const HOTKEY_LETTERS: Record<string, string> = { LinkedIn: "I" };
+
 const profilesInfo = profiles.map(({ network, url }) => {
   const icon = SOCIAL_ICONS[network];
-  const firstLetter = network[0].toUpperCase();
+  const letter = HOTKEY_LETTERS[network] ?? network[0].toUpperCase();
 
   return {
     id: network,
@@ -53,7 +56,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
     title: `Visitar ${network}`,
     url,
     icon,
-    hotkey: `ctrl+${firstLetter}`,
+    hotkey: `ctrl+${letter}`,
   };
 });
 ---
@@ -131,7 +134,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
       icon: `<svg style="margin-right: 8px" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75 9.75 9.75 0 0 1 8.25 6c0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25 9.75 9.75 0 0 0 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
 </svg>`,
-      hotkey: "ctrl+H",
+      hotkey: "ctrl+B",
       section: "Ações",
       handler: () => {
         const themeApi = window as typeof window & { toggleTheme?: () => void };
