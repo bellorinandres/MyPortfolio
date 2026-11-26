@@ -5,7 +5,7 @@
     "image": "/me.webp",
     "email": "andresbellorin.br@gmail.com",
     "url": "https://my-portfolio-opal-kappa-70.vercel.app",
-    "summary": "Desenvolvedor web autodidata com stack Full Stack (Node.js, React, MySQL) e projetos próprios em produção. Experiência em liderança de equipe no varejo, com foco em gestão de processos e trabalho sob pressão. Documentado regularmente no Brasil; disponível para trabalho presencial em Curitiba ou remoto.",
+    "summary": "Desenvolvedor web autodidata com stack Full Stack (Node.js, React, MySQL) e projetos próprios em produção. Atualmente atuo como Suporte Técnico N1 na Revenda Mais, com atendimento via chat sobre o sistema e notas fiscais (SEFAZ). Experiência anterior em liderança de equipe no varejo, com foco em gestão de processos e trabalho sob pressão. Documentado regularmente no Brasil; disponível para trabalho presencial em Curitiba ou remoto.",
     "location": {
       "city": "Curitiba",
       "region": "Paraná",
@@ -26,10 +26,23 @@
   },
   "work": [
     {
+      "name": "Revenda Mais",
+      "position": "Suporte Técnico N1",
+      "location": "Curitiba, Brasil",
+      "startDate": "2026-10",
+      "summary": "Atendimento presencial de primeiro nível, prestando suporte aos clientes via chat sobre o sistema e sobre notas fiscais junto à SEFAZ.",
+      "highlights": [
+        "Atendimento ao cliente via chat",
+        "Suporte a notas fiscais e SEFAZ",
+        "Suporte ao sistema"
+      ]
+    },
+    {
       "name": "Atacadão (Grupo Carrefour)",
       "position": "Líder de Setor",
       "location": "Curitiba, Brasil",
       "startDate": "2024-11",
+      "endDate": "2026-08",
       "summary": "Supervisão e organização do setor de reposição de mercadorias. Coordenação de tarefas, liderança de equipe e controle de estoque.",
       "highlights": [
         "Promovido de Repositor de Mercadoria para Líder de Setor",
@@ -63,54 +76,16 @@
   ],
   "skills": [
     {
-      "name": "HTML",
-      "level": "Intermediário",
-      "keywords": ["Frontend", "Web", "Semântica"]
+      "name": "Frontend",
+      "keywords": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Astro"]
     },
     {
-      "name": "CSS",
-      "level": "Intermediário",
-      "keywords": ["Frontend", "Web", "Responsivo"]
+      "name": "Backend",
+      "keywords": ["Node.js", "MySQL", "Python"]
     },
     {
-      "name": "JavaScript",
-      "level": "Intermediário",
-      "keywords": ["Frontend", "Backend", "Web"]
-    },
-    {
-      "name": "TypeScript",
-      "level": "Básico",
-      "keywords": ["Frontend", "Backend", "Tipagem"]
-    },
-    {
-      "name": "React",
-      "level": "Intermediário",
-      "keywords": ["Frontend", "JavaScript", "UI"]
-    },
-    {
-      "name": "Node.js",
-      "level": "Intermediário",
-      "keywords": ["Backend", "JavaScript", "APIs"]
-    },
-    {
-      "name": "MySQL",
-      "level": "Intermediário",
-      "keywords": ["Bancos de dados", "SQL", "Backend"]
-    },
-    {
-      "name": "Astro",
-      "level": "Intermediário",
-      "keywords": ["Frontend", "SSG", "Web"]
-    },
-    {
-      "name": "Git",
-      "level": "Intermediário",
-      "keywords": ["Controle de versão", "Colaboração", "DevOps"]
-    },
-    {
-      "name": "Python",
-      "level": "Básico",
-      "keywords": ["Programação", "Automação", "Backend"]
+      "name": "Ferramentas",
+      "keywords": ["Git"]
     }
   ],
   "languages": [
@@ -136,7 +111,7 @@
         "Backend em Node.js",
         "Frontend em React",
         "Banco de dados MySQL",
-        "Projeto em desenvolvimento"
+        "Publicado e em evolução"
       ],
       "url": "https://compraja.app.br"
     },
@@ -157,12 +132,12 @@
     {
       "name": "Portfólio Pessoal",
       "isActive": true,
-      "description": "Site de portfólio e currículo desenvolvido com Astro, com suporte a tema escuro/claro, SEO completo, PWA e métricas de visitas.",
+      "description": "Site de portfólio e currículo desenvolvido com Astro, com suporte a tema escuro/claro, SEO completo e métricas de visitas.",
       "highlights": [
         "Astro 7 + TypeScript",
         "CSS puro sem frameworks",
         "SEO com JSON-LD e Open Graph",
-        "PWA e Vercel Analytics"
+        "Vercel Analytics"
       ],
       "url": "https://my-portfolio-opal-kappa-70.vercel.app",
       "github": "https://github.com/bellorinandres/MyPortfolio"

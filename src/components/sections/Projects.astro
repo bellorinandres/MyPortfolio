@@ -38,6 +38,14 @@ import { projects } from "@cv";
                     )}
                   </h3>
                   <p>{description}</p>
+                  {[url, github].map(
+                    (link) =>
+                      link && (
+                        <p class="print">
+                          <a href={link}>{link.replace("https://", "")}</a>
+                        </p>
+                      )
+                  )}
                 </header>
                 <footer>
                   {highlights.map((highlight) => {

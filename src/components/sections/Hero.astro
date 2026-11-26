@@ -27,7 +27,19 @@ const SOCIAL_ICONS = {
       <span>
         {location.city} - {location.region}
       </span>
-      {email && <p class="print-email print">E-mail: {email}</p>}
+      <div class="print-contact print">
+        {email && <p>E-mail: {email}</p>}
+        {
+          profiles.map(({ network, url }) => (
+            <p>
+              {network}: <a href={url}>{url.replace("https://", "")}</a>
+            </p>
+          ))
+        }
+        <p>
+          Portfólio: <a href={basics.url}>{basics.url.replace("https://", "")}</a>
+        </p>
+      </div>
 
       <footer class="no-print">
         {
@@ -62,6 +74,9 @@ const SOCIAL_ICONS = {
           })
         }
         <ThemeToggle />
+        <button class="download-cv" type="button" title="Salvar como PDF" onclick="window.print()">
+          Baixar CV
+        </button>
       </footer>
     </div>
     <figure>
@@ -141,6 +156,19 @@ const SOCIAL_ICONS = {
       color 0.2s ease;
   }
 
+  .download-cv {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    color: var(--text);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.8rem;
+    height: 36px;
+    padding-inline: 12px;
+    white-space: nowrap;
+  }
+
   footer a:hover {
     background: var(--surface-hover);
     border: 1px solid var(--border-strong);
@@ -153,10 +181,12 @@ const SOCIAL_ICONS = {
     width: 18px;
   }
 
-  .print-email {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+  .print-contact {
     margin-top: 0.35rem;
+  }
+
+  .print-contact a {
+    color: var(--text-muted);
   }
 
   @media (width <= 700px) {

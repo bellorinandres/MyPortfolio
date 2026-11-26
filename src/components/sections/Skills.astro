@@ -39,63 +39,56 @@ const SKILLS_ICONS = {
 ---
 
 <Area title="Habilidades">
-  <ul>
-    {
-      skills.map(({ name, level, keywords }) => {
-        const iconName =
-          {
-            "Next.js": "Next",
-            "Node.js": "Node",
-          }[name] ?? name;
-        const Icon = SKILLS_ICONS[iconName as keyof typeof SKILLS_ICONS];
+  {
+    skills.map(({ name, keywords }) => (
+      <div class="skill-group">
+        <h3>{name}</h3>
+        <ul>
+          {keywords.map((skill) => {
+            const iconName = { "Node.js": "Node" }[skill] ?? skill;
+            const Icon = SKILLS_ICONS[iconName as keyof typeof SKILLS_ICONS];
 
-        return (
-          <li>
-            <div class="skill-title">
-              {Icon && <Icon />}
-              <strong>{name}</strong>
-              <span>{level}</span>
-            </div>
-            {keywords.length > 0 && <small>{keywords.join(" • ")}</small>}
-          </li>
-        );
-      })
-    }
-  </ul>
+            return (
+              <li>
+                {Icon && <Icon />}
+                {skill}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    ))
+  }
 </Area>
 
 <style>
+  .skill-group + .skill-group {
+    margin-top: 12px;
+  }
+
+  h3 {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
   ul {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 8px;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 
   li {
+    align-items: center;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 6px;
     color: var(--text);
-    display: grid;
+    display: flex;
     font-size: 0.8rem;
     font-weight: 500;
     gap: 4px;
     padding: 0.2rem 0.6rem;
-  }
-
-  .skill-title {
-    align-items: center;
-    display: flex;
-    gap: 4px;
-  }
-
-  .skill-title span,
-  small {
-    color: var(--text-muted);
-    font-weight: 400;
-  }
-
-  small {
-    font-size: 0.68rem;
   }
 </style>
