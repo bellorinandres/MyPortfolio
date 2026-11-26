@@ -4,7 +4,7 @@
     "label": "Desenvolvedor Web Full Stack Jr | Node.js · React · MySQL",
     "image": "/me.webp",
     "email": "andresbellorin.br@gmail.com",
-    "url": "https://my-portfolio-opal-kappa-70.vercel.app",
+    "url": "https://andresbellorin.vercel.app",
     "summary": "Desenvolvedor web autodidata com stack Full Stack (Node.js, React, MySQL) e projetos próprios em produção. Atualmente atuo como Suporte Técnico N1 na Revenda Mais, com atendimento via chat sobre o sistema e notas fiscais (SEFAZ). Experiência anterior em liderança de equipe no varejo, com foco em gestão de processos e trabalho sob pressão. Documentado regularmente no Brasil; disponível para trabalho presencial em Curitiba ou remoto.",
     "location": {
       "city": "Curitiba",
@@ -126,7 +126,7 @@
         "Agendamento via WhatsApp API",
         "Deploy na Vercel"
       ],
-      "url": "https://francis-tatto.vercel.app",
+      "url": "https://francistattoo.com.br",
       "github": "https://github.com/bellorinandres/francis-tatto-studio"
     },
     {
@@ -139,7 +139,7 @@
         "SEO com JSON-LD e Open Graph",
         "Vercel Analytics"
       ],
-      "url": "https://my-portfolio-opal-kappa-70.vercel.app",
+      "url": "https://andresbellorin.vercel.app",
       "github": "https://github.com/bellorinandres/MyPortfolio"
     }
   ]
