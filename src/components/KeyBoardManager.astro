@@ -89,6 +89,12 @@ const profilesInfo = profiles.map(({ network, url }) => {
 >
 </div>
 
+<template id="hotkeypad-footer">
+  <p><kbd>↩</kbd> para selecionar</p>
+  <p><kbd>↑</kbd><kbd>↓</kbd> para navegar</p>
+  <p><kbd>Ctrl + K</kbd><kbd>Esc</kbd> para fechar</p>
+</template>
+
 <script>
   interface Info {
     id: string;
@@ -163,6 +169,13 @@ const profilesInfo = profiles.map(({ network, url }) => {
     document.dispatchEvent(event);
   });
 </script>
+
+<style is:global>
+  /* O minificador mantém só `-moz-fit-content` do hotkeypad e corta "Ctrl". */
+  #hotkeypad [data-hotkey] div span {
+    width: fit-content;
+  }
+</style>
 
 <style>
   @media (min-width: 601px) {

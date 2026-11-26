@@ -6,7 +6,7 @@ O site combina uma experiência visual de livro aberto em desktop com uma versã
 
 ## Stack
 
-- Astro 6
+- Astro 7
 - TypeScript
 - HTML e CSS
 - `hotkeypad` para paleta de comandos

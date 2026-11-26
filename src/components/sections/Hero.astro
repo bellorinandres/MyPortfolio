@@ -25,7 +25,7 @@ const SOCIAL_ICONS = {
       <h1>{name}</h1>
       <h2>{label}</h2>
       <span>
-        {location.city}, {location.postalCode} - {location.region}
+        {location.city} - {location.region}
       </span>
       {email && <p class="print-email print">E-mail: {email}</p>}
 
@@ -65,7 +65,7 @@ const SOCIAL_ICONS = {
       </footer>
     </div>
     <figure>
-      <Image src={meImage} alt={name} width={128} height={128} densities={[1, 2]} fetchpriority="high" />
+      <Image src={meImage} alt={name} width={128} height={128} densities={[1, 2]} loading="eager" fetchpriority="high" />
     </figure>
   </div>
 </Area>

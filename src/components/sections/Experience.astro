@@ -9,7 +9,7 @@ const getYear = (date?: string | null) => {
 
   if (Number.isNaN(parsedDate.getTime())) return null;
 
-  return parsedDate.getFullYear();
+  return parsedDate.getUTCFullYear();
 };
 ---
 

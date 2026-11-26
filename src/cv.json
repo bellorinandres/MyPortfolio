@@ -9,7 +9,6 @@
     "location": {
       "city": "Curitiba",
       "region": "Paraná",
-      "postalCode": "82015010",
       "country": "Brasil"
     },
     "profiles": [
@@ -160,7 +159,7 @@
       "isActive": true,
       "description": "Site de portfólio e currículo desenvolvido com Astro, com suporte a tema escuro/claro, SEO completo, PWA e métricas de visitas.",
       "highlights": [
-        "Astro 6 + TypeScript",
+        "Astro 7 + TypeScript",
         "CSS puro sem frameworks",
         "SEO com JSON-LD e Open Graph",
         "PWA e Vercel Analytics"
