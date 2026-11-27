@@ -23,10 +23,10 @@ import { projects } from "@cv";
                     >
                       {name}
                     </a>
-                    {isActive && <span>•</span>}
+                    {isActive && <span class="no-print">•</span>}
                     {github && (
                       <a
-                        class="github-code-link"
+                        class="github-code-link no-print"
                         href={github}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -37,7 +37,7 @@ import { projects } from "@cv";
                       </a>
                     )}
                   </h3>
-                  <p>{description}</p>
+                  <p class="no-print">{description}</p>
                   {[url, github].map(
                     (link) =>
                       link && (
@@ -128,6 +128,22 @@ import { projects } from "@cv";
 
   .print a {
     overflow-wrap: anywhere;
+  }
+
+  @media print {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-inline: 0;
+    }
+
+    article {
+      background: none;
+      border: 0;
+      gap: 4px;
+      padding: 0;
+    }
   }
 
   @media (width <= 700px) {

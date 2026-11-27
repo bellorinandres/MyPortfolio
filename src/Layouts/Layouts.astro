@@ -253,6 +253,11 @@ const structuredData = [
     display: none !important;
   }
 
+  /* margin: 0 remove o cabeçalho e rodapé do navegador; a margem vai no main. */
+  @page {
+    margin: 0;
+  }
+
   @media print {
     html {
       --background: #fff;

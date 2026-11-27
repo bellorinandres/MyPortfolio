@@ -1,5 +1,6 @@
 ---
 import About from "@/components/sections/About.astro";
+import Certificates from "@/components/sections/Certificates.astro";
 import Education from "@/components/sections/Education.astro";
 import Experience from "@/components/sections/Experience.astro";
 import Hero from "@/components/sections/Hero.astro";
@@ -26,6 +27,7 @@ const { name, label } = basics;
       <div class="book-page book-page-right">
         <div class="book-section experience-section"><Experience /></div>
         <div class="book-section education-section"><Education /></div>
+        <div class="book-section certificates-section"><Certificates /></div>
         <div class="book-section projects-section"><Projects /></div>
       </div>
     </div>
@@ -67,16 +69,20 @@ const { name, label } = basics;
     order: 4;
   }
 
-  .projects-section {
+  .certificates-section {
     order: 5;
   }
 
-  .skills-section {
+  .projects-section {
     order: 6;
   }
 
-  .languages-section {
+  .skills-section {
     order: 7;
+  }
+
+  .languages-section {
+    order: 8;
   }
 
   @media screen and (width < 1024px) {
@@ -94,6 +100,10 @@ const { name, label } = basics;
 
     .education-section {
       order: 6;
+    }
+
+    .certificates-section {
+      order: 7;
     }
   }
 
@@ -180,7 +190,10 @@ const { name, label } = basics;
     main {
       display: block;
       min-height: auto;
-      padding: 0;
+      padding: 12mm;
+      /* repete a margem em todas as páginas */
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
 
     .book-layout {

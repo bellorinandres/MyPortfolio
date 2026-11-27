@@ -1,0 +1,59 @@
+---
+import Area from "@/components/Area.astro";
+import { formatDate } from "@/formatDate";
+import { certificates } from "@cv";
+---
+
+<Area title="Certificados">
+  <ul>
+    {
+      certificates.map(({ name, issuer, date, hours, url }) => (
+        <li>
+          <article>
+            <header>
+              <h3>
+                <a href={url} target="_blank" rel="noopener noreferrer" title={`Ver certificado ${name} no LinkedIn`}>
+                  {name} <span class="no-print">↗</span>
+                </a>
+              </h3>
+              <time datetime={date}>{formatDate(date)}</time>
+            </header>
+            <p>
+              {issuer} · {hours} horas
+            </p>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</Area>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 4px;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  time {
+    color: var(--text-subtle);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+</style>

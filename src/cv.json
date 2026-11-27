@@ -74,6 +74,15 @@
       "courses": []
     }
   ],
+  "certificates": [
+    {
+      "name": "Administrando Banco de Dados",
+      "issuer": "Fundação Bradesco · Escola Virtual",
+      "date": "2026-09-26",
+      "hours": 15,
+      "url": "https://www.linkedin.com/posts/andresbellorin_sqlserver-bancodedados-aprendizadocontaednuo-share-7515766986136592384-4xHx/"
+    }
+  ],
   "skills": [
     {
       "name": "Frontend",
@@ -108,10 +117,9 @@
       "isActive": true,
       "description": "Aplicativo web para criar e organizar listas de compras de forma rápida e inteligente, com controle de gastos em tempo real.",
       "highlights": [
-        "Backend em Node.js",
-        "Frontend em React",
-        "Banco de dados MySQL",
-        "Publicado e em evolução"
+        "Node.js",
+        "React",
+        "MySQL"
       ],
       "url": "https://compraja.app.br"
     },
@@ -120,11 +128,10 @@
       "isActive": true,
       "description": "Site de portfólio e agendamento para tatuadora autônoma em Curitiba, com galeria de trabalhos, estilos, cuidados pós-tatuagem e formulário que gera mensagem automática no WhatsApp.",
       "highlights": [
-        "Site estático e responsivo",
-        "HTML semântico e CSS puro",
-        "Imagens otimizadas em WebP",
-        "Agendamento via WhatsApp API",
-        "Deploy na Vercel"
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "WhatsApp API"
       ],
       "url": "https://francistattoo.com.br",
       "github": "https://github.com/bellorinandres/francis-tatto-studio"
@@ -134,9 +141,9 @@
       "isActive": true,
       "description": "Site de portfólio e currículo desenvolvido com Astro, com suporte a tema escuro/claro, SEO completo e métricas de visitas.",
       "highlights": [
-        "Astro 7 + TypeScript",
-        "CSS puro sem frameworks",
-        "SEO com JSON-LD e Open Graph",
+        "Astro",
+        "TypeScript",
+        "CSS",
         "Vercel Analytics"
       ],
       "url": "https://andresbellorin.vercel.app",
