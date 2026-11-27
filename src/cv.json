@@ -5,7 +5,7 @@
     "image": "/me.webp",
     "email": "andresbellorin.br@gmail.com",
     "url": "https://andresbellorin.vercel.app",
-    "summary": "Desenvolvedor web autodidata com stack Full Stack (Node.js, React, MySQL) e projetos próprios em produção. Atualmente atuo como Suporte Técnico N1 na Revenda Mais, com atendimento via chat sobre o sistema e notas fiscais (SEFAZ). Experiência anterior em liderança de equipe no varejo, com foco em gestão de processos e trabalho sob pressão. Documentado regularmente no Brasil; disponível para trabalho presencial em Curitiba ou remoto.",
+    "summary": "Desenvolvedor Web Full Stack Jr autodidata, com prática em Node.js, React e MySQL. Criei e publiquei o CompraJá, um aplicativo para organizar listas de compras e controlar gastos. Sempre aberto a novas experiências e desafios em tecnologia, presencialmente em Curitiba ou de forma remota.",
     "location": {
       "city": "Curitiba",
       "region": "Paraná",
@@ -121,6 +121,7 @@
         "React",
         "MySQL"
       ],
+      "image": "compraja.webp",
       "url": "https://compraja.app.br"
     },
     {
@@ -133,6 +134,7 @@
         "JavaScript",
         "WhatsApp API"
       ],
+      "image": "francis-tattoo.webp",
       "url": "https://francistattoo.com.br",
       "github": "https://github.com/bellorinandres/francis-tatto-studio"
     },
@@ -146,6 +148,7 @@
         "CSS",
         "Vercel Analytics"
       ],
+      "image": "portfolio.webp",
       "url": "https://andresbellorin.vercel.app",
       "github": "https://github.com/bellorinandres/MyPortfolio"
     }

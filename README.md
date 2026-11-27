@@ -40,7 +40,7 @@ Depois acesse o endereço exibido no terminal.
 | `npm run dev` | Inicia o servidor de desenvolvimento. |
 | `npm run build` | Gera a versão de produção em `dist`. |
 | `npm run preview` | Visualiza o build de produção localmente. |
-| `npm run cv` | Gera `public/cv.pdf` (requer Chrome). Rode depois de alterar o conteúdo ou o layout de impressão. |
+| `npm run cv` | Gera `public/cv.pdf` (requer Chrome). Rode depois de alterar o conteúdo ou o layout de impressão. Um hook de pre-commit (ativado pelo `npm install`) avisa se `src/` mudou sem o PDF. |
 | `npm run astro` | Executa comandos da CLI do Astro. |
 
 ## Conteúdo

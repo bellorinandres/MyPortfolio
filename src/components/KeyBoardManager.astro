@@ -190,6 +190,24 @@ const profilesInfo = profiles.map(({ network, url }) => {
   #hotkeypad [data-hotkey] div span {
     width: fit-content;
   }
+
+  /* Toque no ícone ou no texto conta como toque no item (a lib só olha o alvo e o pai). */
+  #hotkeypad [data-hotkey] * {
+    pointer-events: none;
+  }
+
+  /* No celular só os botões: sem busca (nem teclado virtual), atalhos ou dicas. */
+  @media (max-width: 600px) {
+    #hotkeypad [data-container] header,
+    #hotkeypad [data-container] footer,
+    #hotkeypad [data-container] [data-hotkey] div {
+      display: none;
+    }
+
+    #hotkeypad [data-sections] {
+      border-block: 0;
+    }
+  }
 </style>
 
 <style>

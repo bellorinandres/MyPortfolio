@@ -1,18 +1,30 @@
 ---
+import { Image } from "astro:assets";
 import Area from "@/components/Area.astro";
 
 import GitHub from "@/icons/GitHub.astro";
 import { projects } from "@cv";
+
+const screenshots = import.meta.glob<{ default: ImageMetadata }>("../../assets/projects/*.webp", {
+  eager: true,
+});
 ---
 
 <Area title="Projetos">
   <ul>
     {
       projects.map(
-        ({ url, description, highlights, name, isActive, github }) => {
+        ({ url, description, highlights, name, isActive, github, image }) => {
           return (
             <li>
               <article>
+                <Image
+                  class="screenshot no-print"
+                  src={screenshots[`../../assets/projects/${image}`].default}
+                  alt={`Tela inicial do projeto ${name}`}
+                  widths={[400, 800]}
+                  sizes="(width <= 700px) 90vw, 400px"
+                />
                 <header>
                   <h3>
                     <a
@@ -78,6 +90,16 @@ import { projects } from "@cv";
     flex-direction: column;
     padding: 16px;
     height: 100%;
+  }
+
+  .screenshot {
+    aspect-ratio: 16 / 10;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
   }
 
   article header {

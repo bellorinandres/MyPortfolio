@@ -1,0 +1,7 @@
+#!/bin/sh
+# Avisa quando src/ muda sem o PDF do currículo ser regenerado. Não bloqueia o commit.
+changed=$(git diff --cached --name-only)
+if echo "$changed" | grep -q '^src/' && ! echo "$changed" | grep -qx 'public/cv.pdf'; then
+  echo "AVISO: src/ mudou, mas public/cv.pdf não. Se o currículo mudou, rode:" >&2
+  echo "  npm run cv && git add public/cv.pdf" >&2
+fi
