@@ -74,8 +74,8 @@ const SOCIAL_ICONS = {
           })
         }
         <ThemeToggle />
-        <button class="download-cv" type="button" title="Salvar como PDF" onclick="window.print()">
-          Baixar CV
+        <button class="download-cv" type="button" title="Baixar e compartilhar o currículo em PDF">
+          Compartilhar CV
         </button>
       </footer>
     </div>
@@ -84,6 +84,12 @@ const SOCIAL_ICONS = {
     </figure>
   </div>
 </Area>
+
+<script>
+  import { shareCv } from "@/shareCv";
+
+  document.querySelector(".download-cv")?.addEventListener("click", shareCv);
+</script>
 
 <style>
   .container {

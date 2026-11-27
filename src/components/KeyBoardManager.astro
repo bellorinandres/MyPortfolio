@@ -65,8 +65,9 @@ const profilesInfo = profiles.map(({ network, url }) => {
   Pressione <kbd>Ctrl</kbd> + <kbd>K</kbd> para abrir a paleta de comandos.
 </footer>
 
-<div id="footer-button" class="no-print">
+<button id="footer-button" class="no-print" type="button" aria-label="Abrir paleta de comandos">
   <svg
+    aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     class="icon icon-tabler icon-tabler-command"
     width="32"
@@ -83,7 +84,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
       d="M7 9a2 2 0 1 1 2 -2v10a2 2 0 1 1 -2 -2h10a2 2 0 1 1 -2 2v-10a2 2 0 1 1 2 2h-10"
     ></path>
   </svg>
-</div>
+</button>
 
 <div
   id="hotkeypad"
@@ -110,6 +111,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
   }
 
   import HotKeyPad from "hotkeypad";
+  import { shareCv } from "@/shareCv";
 
   const hotkeypad = new HotKeyPad();
   const info = hotkeypad.instance.getAttribute("data-info") ?? "[]";
@@ -152,6 +154,16 @@ const profilesInfo = profiles.map(({ network, url }) => {
       handler: () => {
         window.print();
       },
+    },
+    {
+      id: "share-cv",
+      title: "Compartilhar CV",
+      icon: `<svg style="margin-right: 8px" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+</svg>`,
+      hotkey: "ctrl+S",
+      section: "Ações",
+      handler: shareCv,
     },
     ...data,
   ]);

@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "cv": "node scripts/cv-pdf.mjs",
     "astro": "astro"
   },
   "dependencies": {
