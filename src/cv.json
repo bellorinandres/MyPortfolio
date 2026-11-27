@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Andres David Bellorin Marin",
-    "label": "Desenvolvedor Web Full Stack Jr | Node.js · React · MySQL",
+    "label": "Desenvolvedor Web Full Stack Jr | Node.js · React · PostgreSQL",
     "image": "/me.webp",
     "email": "andresbellorin.br@gmail.com",
     "url": "https://andresbellorin.vercel.app",
-    "summary": "Desenvolvedor Web Full Stack Jr autodidata, com prática em Node.js, React e MySQL. Criei e publiquei o CompraJá, um aplicativo para organizar listas de compras e controlar gastos. Sempre aberto a novas experiências e desafios em tecnologia, presencialmente em Curitiba ou de forma remota.",
+    "summary": "Desenvolvedor Web Full Stack Jr autodidata, com prática em Node.js, React e PostgreSQL. Criei e publiquei o CompraJá, um aplicativo para organizar listas de compras e controlar gastos. Sempre aberto a novas experiências e desafios em tecnologia, presencialmente em Curitiba ou de forma remota.",
     "location": {
       "city": "Curitiba",
       "region": "Paraná",
@@ -119,7 +119,7 @@
       "highlights": [
         "Node.js",
         "React",
-        "MySQL"
+        "PostgreSQL"
       ],
       "image": "compraja.webp",
       "url": "https://compraja.app.br"
