@@ -18,13 +18,24 @@ const screenshots = import.meta.glob<{ default: ImageMetadata }>("../../assets/p
           return (
             <li>
               <article>
-                <Image
-                  class="screenshot no-print"
-                  src={screenshots[`../../assets/projects/${image}`].default}
-                  alt={`Tela inicial do projeto ${name}`}
-                  widths={[400, 800]}
-                  sizes="(width <= 700px) 90vw, 400px"
-                />
+                {/* Mesmo destino do título: fora do Tab e do leitor de tela para não duplicar o link. */}
+                <a
+                  class="screenshot-link no-print"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Ver projeto ${name}`}
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <Image
+                    class="screenshot"
+                    src={screenshots[`../../assets/projects/${image}`].default}
+                    alt={`Tela inicial do projeto ${name}`}
+                    widths={[400, 800]}
+                    sizes="(width <= 700px) 90vw, 400px"
+                  />
+                </a>
                 <header>
                   <h3>
                     <a
@@ -92,7 +103,12 @@ const screenshots = import.meta.glob<{ default: ImageMetadata }>("../../assets/p
     height: 100%;
   }
 
+  .screenshot-link:hover .screenshot {
+    border-color: var(--accent);
+  }
+
   .screenshot {
+    display: block;
     aspect-ratio: 16 / 10;
     border: 1px solid var(--border);
     border-radius: 6px;
